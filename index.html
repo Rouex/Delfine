@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delfine-Lernkontrolle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0px;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 750px;
+            width: 90%;
+            text-align: left;
+            margin-bottom: 50px;    
+        }
+        iframe {
+            width: 100%; 
+            max-width: 100%;  
+            height: 637px;
+            border: none;
+            box-sizing: border-box;
+        }
+
+
+        h1, h2, h3 {
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .easter-egg {
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #dff0d8;
+            border: 1px solid #d6e9c6;
+            border-radius: 5px;
+            color: #3c763d;
+            font-size: 20px;
+            filter: blur(5px);
+            cursor: pointer; 
+            text-align: center;
+            transition: filter 0.3s ease-out; 
+        }
+        .easter-egg:hover, .easter-egg:focus {
+            filter: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Delfine - warum sie keine Fisce sind</h1>
+        <h2><em><b>Aufgabe 1: Fülle die Lücken aus !</b></em></h2>
+        <iframe src="https://delfinekeinfisch.h5p.com/content/1292457828709516447/embed" aria-label="Delfine-Lernkontrolle" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://delfinekeinfisch.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
+        <h2><em><b>Aufgabe 2: Ordne die Begriffe der Kategorie Fisc oder Delfin zu !</b></em></h2>
+        <iframe src="https://delfinekeinfisch.h5p.com/content/1292457843232178387/embed" aria-label="Delfine - Fische Drag &amp; Drop" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://delfinekeinfisch.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
+
+
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p><p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <p>‎ </p>
+    <div class="easter-egg" id="easterEgg">
+        Pepe
+    </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.scrollY + window.innerHeight;  // Position of the bottom of the viewport
+            var documentHeight = document.body.scrollHeight;          // Total height of the document
+            var easterEgg = document.getElementById('easterEgg');
+            if (scrollPosition >= documentHeight - 100) {             // Show the Easter egg when within 1000 pixels of the bottom
+                easterEgg.style.display = 'block';
+            } else {
+                easterEgg.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
