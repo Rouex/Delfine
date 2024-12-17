@@ -62,20 +62,6 @@
             border: 1px solid #ccc;
         }
 
-        .image-container {
-            margin-top: 20px;
-            display: none;
-            text-align: center;
-        }
-
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            opacity: 0;
-            transition: opacity 2s ease-out;
-        }
-
-
         .easter-egg {
             display: block;
             margin-top: 20px;
@@ -111,54 +97,11 @@
         <br>
         <iframe src="https://delfinekeinfisch.h5p.com/content/1292458692426231907/embed" aria-label="Delfine-Multiple" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://delfinekeinfisch.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
 
-
-
-        <div class="input-container">
-            <input type="text" id="triggerInput">
-        </div>
-
-        <div class="image-container" id="imageContainer">
-            <img src="https://i.ibb.co/hKJ14NF/image.png" alt="Pepe?!" id="triggerImage">
-        </div>
+        
+    <div class="easter-egg" id="easterEgg">
+        Pepe
     </div>
-
     <script>
-        const triggerInput = document.getElementById('triggerInput');
-        const imageContainer = document.getElementById('imageContainer');
-        const triggerImage = document.getElementById('triggerImage');
-
-        triggerInput.addEventListener('input', function() {
-            if (triggerInput.value.toLowerCase() === 'pepe') {
-                imageContainer.style.display = 'block';
-                triggerInput.value = '';
-                
-                setTimeout(function() {
-                    triggerImage.style.opacity = 0;
-                    setTimeout(function() {
-                        imageContainer.style.display = 'none';
-                        triggerImage.style.opacity = 1;
-                    }, 2000); 
-                }, 1000); 
-            }
-        });
-
-        window.addEventListener('scroll', function() {
-            var scrollPosition = window.scrollY + window.innerHeight;
-            var documentHeight = document.body.scrollHeight;        
-            var easterEgg = document.getElementById('easterEgg');
-            if (scrollPosition >= documentHeight - 100) {             
-                easterEgg.style.display = 'block';
-            } else {
-                easterEgg.style.display = 'none';
-            }
-        });
-    </script>
-
-<!--
-        <div class="easter-egg" id="easterEgg">
-            Pepe
-        </div>
-        <script>
             window.addEventListener('scroll', function() {
                 var scrollPosition = window.scrollY + window.innerHeight;  // Position of the bottom of the viewport
                 var documentHeight = document.body.scrollHeight;          // Total height of the document
@@ -169,8 +112,7 @@
                     easterEgg.style.display = 'none';
                 }
             });
-        </script>
- -->
+    </script>
 
 </body>
 </html>
